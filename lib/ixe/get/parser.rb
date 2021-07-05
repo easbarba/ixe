@@ -2,8 +2,8 @@
 
 require 'pathname'
 
-module Cejo
-  module Media
+module Ixe
+  module Get
     # Parse information using grabber
     class Parser
       attr_reader :current, :url
@@ -25,6 +25,7 @@ module Cejo
       def result
         `""#{base}""`.strip
       end
+
       private :exec
     end
   end

@@ -2,19 +2,19 @@
 
 require 'pathname'
 
-module Cejo
-  module Media
+module Ixe
+  module Get
     # Main caller
     class Main
       attr_reader :info
 
       def initialize(codec, url)
-        current = Cejo::Media::Grabbers.new.youtube_dl
-        @info = Cejo::Media::Info.new(url, codec, current)
+        current = Ixe::Get::Grabbers::Youtube_dl.new
+        @info = Ixe::Get::Info.new(url, codec, current)
       end
 
       def run
-        Cejo::Media::Get.new(info).exec
+        Ixe::Get::Getting.new(info).exec
       end
     end
   end

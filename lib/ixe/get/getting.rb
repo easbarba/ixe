@@ -2,10 +2,10 @@
 
 require 'pathname'
 
-module Cejo
-  module Media
+module Ixe
+  module Get
     # Get media pointed in url.
-    class Get
+    class Getting
       AUDIO_DIR = Pathname.new(Dir.home).join('Music')
       VIDEO_DIR = Pathname.new(Dir.home).join('Videos')
       AUDIO_FORMATS = %w[vorbis flac mp3].freeze
@@ -27,12 +27,11 @@ module Cejo
 
       def show_info
         puts <<~INFO
-          Title: #{info.title}
-          Url: #{info.url}
-          Codec: #{info.codec}
-          Folder: #{current_dir}
-        INFO
-
+               Title: #{info.title}
+               Url: #{info.url}
+               Codec: #{info.codec}
+               Folder: #{current_dir}
+             INFO
         puts
       end
 

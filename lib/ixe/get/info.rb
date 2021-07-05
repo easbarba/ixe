@@ -2,8 +2,8 @@
 
 require 'pathname'
 
-module Cejo
-  module Media
+module Ixe
+  module Get
     # Media information
     class Info
       attr_reader :url, :current
@@ -13,7 +13,7 @@ module Cejo
         @url = url
         @codec = codec
         @current = current
-        @parser = Cejo::Media::Parser.new(current, url)
+        @parser = Ixe::Get::Parser.new(current, url)
       end
 
       def program
@@ -44,6 +44,7 @@ module Cejo
 
         title.split.size > max_words ? fixed : title
       end
+
       private :shorter_title
 
       def to_s
