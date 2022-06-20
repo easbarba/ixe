@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require_relative "lib/ixe/version"
+require_relative 'lib/ixe/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "ixe"
+  spec.name          = 'ixe'
   spec.version       = Ixe::VERSION
-  spec.authors       = ["easbarbosa"]
-  spec.email         = ["easbarbosa@tutanota.me"]
+  spec.authors       = ['dynab']
+  spec.email         = ['dynab@tutanota.me']
 
-  spec.summary       = "Manage system media utilities."
+  spec.summary       = 'Manage system media utilities.'
   # spec.description   = "TODO: Write a longer description or delete this line."
-  spec.homepage      = 'https://git.sr.ht/~easbarbosa/ixe'
+  spec.homepage      = 'https://git.sr.ht/~dynab/ixe'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.7')
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to 'https://mygemserver.com'"
@@ -24,9 +24,9 @@ Gem::Specification.new do |spec|
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{\A(?:test|spec|features)/}) }
   end
-  spec.bindir        = "exe"
+  spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.require_paths = ['lib']
 
   # requirements
   # s.requirements << 'ffmpeg'
@@ -52,6 +52,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop', '~> 1.15'
   spec.add_development_dependency 'rubocop-rspec', '~> 2.3'
   spec.add_development_dependency 'rufo', '~> 0.12.0'
-  spec.add_development_dependency 'yard', '~> 0.9.26'
   spec.add_development_dependency 'solargraph', '~> 0.40.4'
+  spec.add_development_dependency 'yard', '~> 0.9.26'
 end
